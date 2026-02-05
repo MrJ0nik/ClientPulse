@@ -1,0 +1,89 @@
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0b1021;
+  position: relative;
+  overflow: hidden;
+}
+
+.wrapper::before {
+  content: "";
+  position: absolute;
+
+  width: 300%;
+  height: 300%;
+
+  background-image:
+    radial-gradient(at 0% 0%, rgba(64, 194, 129, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(124, 77, 255, 0.15) 0px, transparent 50%);
+
+  animation: spin 60s linear infinite;
+  z-index: 0;
+
+  will-change: transform;
+}
+
+.wrapper > * {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.title {
+  color: white;
+  font-family: var(--font-geist-sans);
+  font-weight: 900;
+  font-size: 2rem;
+  letter-spacing: -1px;
+}
+
+.paper {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.label {
+  color: #a1a1aa;
+}
+
+.input {
+  background: rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.input:focus {
+  border-color: #40c281;
+}
+
+.submitBtn {
+  background: linear-gradient(90deg, #40c281 0%, #7c4dff 100%);
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.submitBtn:hover {
+  filter: brightness(1.15);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(64, 194, 129, 0.3);
+}
+
+.link {
+  color: #40c281;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}

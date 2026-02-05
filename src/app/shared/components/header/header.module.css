@@ -2,34 +2,44 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100%;
-  background-color: var(--blur-background);
+  height: 80px;
+  background-color: var(
+    --blur-background,
+    rgba(11, 16, 33, 0.6)
+  ); /* Fallback колір */
   margin: 24px;
   padding: 0 64px;
 
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
 
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--border-color, rgba(255, 255, 255, 0.1)); /* Fallback колір */
 
   border-radius: 16px;
+
+  position: relative;
+  z-index: 100;
 }
 
 .buttonsContainer {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   gap: 45px;
 }
-.Button:hover {
-  background-color: var(--border-color);
+
+.Button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
   transition: 300ms;
-  padding: 12px;
-  border-radius: 16px;
+
+  display: flex;
+  align-items: center;
 }
 
-@media (min-width: 48em) {
-  .buttonsGroup {
-    display: flex;
-    gap: var(--mantine-spacing-md);
-  }
+.Button:hover {
+  background-color: var(--border-color, rgba(255, 255, 255, 0.1));
+  padding: 12px;
+  border-radius: 16px;
 }

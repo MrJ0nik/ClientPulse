@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "@mantine/core/styles.css";
 import "@mantine/charts/styles.css";
 import { ColorSchemeScript, MantineProvider } from "@mantine/core";
-import "./globals.css";
+import StoreProvider from "./StoreProvider";
 
 export const metadata: Metadata = {
   title: "ClientPulse",
@@ -20,7 +20,9 @@ export default function RootLayout({
         <ColorSchemeScript />
       </head>
       <body>
-        <MantineProvider>{children}</MantineProvider>
+        <StoreProvider>
+          <MantineProvider>{children}</MantineProvider>
+        </StoreProvider>
       </body>
     </html>
   );
