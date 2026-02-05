@@ -1,0 +1,232 @@
+/* 1. Нова анімація для плавного переливання градієнта */
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.section {
+  padding: 25px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.headingBlock {
+  text-align: center;
+  margin-bottom: 60px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1),
+    transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.title {
+  font-size: 42px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  color: #94a3b8;
+  font-size: 18px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: 250px 250px;
+  gap: 24px;
+}
+
+.card {
+  background-color: rgba(11, 16, 33, 0.4);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+  opacity: 0;
+  transform: translateY(50px);
+  transition:
+    opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1),
+    transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1),
+    border-color 0.3s ease;
+}
+
+/* --- ОНОВЛЕНИЙ БЛОК З ГРАДІЄНТОМ --- */
+.gradient {
+  /* Створюємо довгий закільцований градієнт (зелений -> фіол -> зелений) */
+  background: linear-gradient(
+    90deg,
+    rgba(96, 189, 113, 0.1) 0%,
+    rgba(168, 90, 237, 0.1) 50%,
+    rgba(96, 189, 113, 0.1) 100%
+  );
+  /* Розтягуємо його, щоб було куди рухати */
+  background-size: 300% auto;
+
+  /* Базова тінь */
+  box-shadow:
+    0 0 30px rgba(96, 189, 113, 0.2),
+    0 0 50px rgba(168, 90, 237, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  position: relative;
+  z-index: 1;
+  height: 100%;
+
+  /* Плавні переходи властивостей при ховері */
+  transition:
+    box-shadow 0.5s ease,
+    border-color 0.5s ease,
+    filter 0.5s ease;
+
+  /* Застосовуємо анімацію руху: дуже повільно (15 секунд), нескінченно, лінійно */
+  animation: gradientFlow 10s ease-in-out infinite alternate;
+}
+
+.card:hover .gradient {
+  /* При наведенні робимо той самий градієнт яскравішим (більша непрозорість) */
+  background: linear-gradient(
+    90deg,
+    rgba(96, 189, 113, 0.3) 0%,
+    rgba(168, 90, 237, 0.3) 50%,
+    rgba(96, 189, 113, 0.3) 100%
+  );
+  background-size: 300% auto;
+
+  /* Підсилюємо світіння */
+  box-shadow:
+    0 0 50px rgba(96, 189, 113, 0.6),
+    0 0 90px rgba(168, 90, 237, 0.5),
+    inset 0 0 30px rgba(255, 255, 255, 0.15);
+
+  /* Додаємо загальної яскравості */
+  filter: brightness(1.2);
+  border-color: rgba(255, 255, 255, 0.3);
+
+  /* Важливо: анімація руху НЕ зупиняється при наведенні */
+}
+/* ---------------------------------- */
+
+.delay1 {
+  transition-delay: 100ms;
+}
+.delay2 {
+  transition-delay: 250ms;
+}
+.delay3 {
+  transition-delay: 400ms;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card:hover {
+  border-color: rgba(64, 194, 129, 0.3);
+}
+
+.largeItem {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  display: flex;
+  flex-direction: column;
+}
+
+.smallItem {
+  grid-column: 2 / 3;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cardContent {
+  padding: 40px;
+  z-index: 2;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.iconBox {
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background-color: rgba(16, 26, 35, 0.6);
+  border: 1px solid rgba(74, 222, 128, 0.2);
+  box-shadow: inset 0 0 15px rgba(74, 222, 128, 0.05);
+}
+
+.cardTitle {
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.cardDesc {
+  color: #94a3b8;
+  font-size: 16px;
+}
+
+.mockupContainer {
+  flex-grow: 1;
+  position: relative;
+  margin-top: 20px;
+  margin-right: -40px;
+  margin-bottom: -40px;
+  border-top-left-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #0b1021;
+  overflow: hidden;
+  box-shadow: -10px -10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.mockupInner {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #151b2d 0%, #0b1021 100%);
+}
+
+.gradientText {
+  font-size: 32px;
+  font-weight: 800;
+  background: linear-gradient(90deg, #40c281 0%, #7c4dff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .largeItem {
+    grid-column: 1;
+    grid-row: auto;
+    height: 400px;
+  }
+  .mockupContainer {
+    margin-right: 0;
+    margin-bottom: 0;
+    margin: 20px;
+  }
+}

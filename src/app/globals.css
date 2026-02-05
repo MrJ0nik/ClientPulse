@@ -1,0 +1,24 @@
+:root {
+  /* Backgrounds */
+  --bg-midnight: #0b1021;
+  --bg-slate: #151b2d;
+  --border-color: #2a324a;
+  --blur-background: #2a324a5e;
+  /* Accents */
+  --accent-growth: #10b981;
+  --accent-ai: #8b5cf6;
+  --accent-alert: #f97316;
+  --accent-brand: #2979ff;
+  --accent-brandopacity45: rgba(41, 121, 255, 0.45);
+
+  /* Typography */
+  --text-primary: #ffffff;
+  --text-secondary: #94a3b8;
+}
+
+body {
+  background-color: var(--bg-midnight);
+  color: var(--text-primary);
+  margin: 0;
+  font-family: sans-serif;
+}

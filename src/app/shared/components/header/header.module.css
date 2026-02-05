@@ -1,0 +1,35 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  background-color: var(--blur-background);
+  margin: 24px;
+  padding: 0 64px;
+
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  border: 1px solid var(--border-color);
+
+  border-radius: 16px;
+}
+
+.buttonsContainer {
+  display: flex;
+  justify-content: space-around;
+  gap: 45px;
+}
+.Button:hover {
+  background-color: var(--border-color);
+  transition: 300ms;
+  padding: 12px;
+  border-radius: 16px;
+}
+
+@media (min-width: 48em) {
+  .buttonsGroup {
+    display: flex;
+    gap: var(--mantine-spacing-md);
+  }
+}
