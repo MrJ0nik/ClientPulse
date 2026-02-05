@@ -14,17 +14,6 @@ interface AuthState {
   isInitialized: boolean;
 }
 
-// const initialState: AuthState = {
-//   user: {
-//     id: "1",
-//     name: "User",
-//     email: "User@example.com",
-//   },
-//   isAuthenticated: true,
-//   isLoading: false,
-//   isInitialized: true,
-// };
-
 const initialState: AuthState = {
   user: null,
   isAuthenticated: false,
