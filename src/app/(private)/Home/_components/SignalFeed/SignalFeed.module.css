@@ -1,0 +1,101 @@
+.card {
+  background: linear-gradient(135deg, #1a1d29 0%, #0f1117 100%);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  margin-bottom: 40px;
+}
+
+.badge {
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  color: rgba(255, 255, 255, 0.7) !important;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.timelineContainer {
+  position: relative;
+  max-width: 100%;
+  padding: 20px 0;
+}
+
+.centerLine {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #374151;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.timelineRow {
+  display: grid;
+  grid-template-columns: 1fr 60px 1fr;
+  align-items: center;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.bulletContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bullet {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid rgba(139, 92, 246, 0.3);
+  box-shadow: 0 0 30px rgba(139, 92, 246, 0.4);
+}
+
+.contentLeft {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 20px;
+}
+
+.contentRight {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 20px;
+}
+
+.eventCard {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  max-width: 320px;
+  width: 100%;
+  transition: transform 0.2s;
+}
+
+.eventCard:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animatedItem {
+  opacity: 0;
+  animation: fadeInUp 0.5s ease-out forwards;
+}

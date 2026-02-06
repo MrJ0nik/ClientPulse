@@ -13,6 +13,7 @@
 import Header from "./Home/homeComponents/Header/Header";
 import HomeWrapper from "./Home/HomeWrapper";
 import styles from "./layout.module.css";
+import "@/src/app/globals.css";
 
 export default function HomeLayout({
   children,
