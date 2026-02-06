@@ -11,10 +11,10 @@ import ProtectedRoute from '../(auth)/_components/protectedRoute';
 
 // src/app/(private)/Home/layout.tsx
 
-import Header from "./Home/homeComponents/Header/Header";
-import HomeWrapper from "./Home/HomeWrapper";
-import styles from "./layout.module.css";
-import "@/src/app/globals.css";
+import Header from './home/homeComponents/Header/Header';
+import HomeWrapper from './home/HomeWrapper';
+import styles from './layout.module.css';
+import '@/src/app/globals.css';
 
 export default function HomeLayout({
   children,
@@ -23,10 +23,10 @@ export default function HomeLayout({
 }) {
   return (
     <ProtectedRoute>
-        <div className={styles.layout}>
-      <Header />
-      <HomeWrapper>{children}</HomeWrapper>
-    </div>
+      <div className={styles.layout}>
+        <Header />
+        <HomeWrapper>{children}</HomeWrapper>
+      </div>
     </ProtectedRoute>
   );
 }

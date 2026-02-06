@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import { Button, Paper, Title, Text, Container, Alert } from '@mantine/core';
 import { CircleAlert } from 'lucide-react';
 import classes from './page.module.css';
-import { GoogleIcon } from '../../shared/components/Icons/GoogleIcon';
+import { GoogleIcon } from '../../shared/components/icons/GoogleIcon';
 import { signInWithPopup } from 'firebase/auth';
 import { auth, googleProvider } from '@/src/lib/firebase';
 
