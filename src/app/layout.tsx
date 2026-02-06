@@ -1,12 +1,12 @@
-import type { Metadata } from "next";
-import "@mantine/core/styles.css";
-import "@mantine/charts/styles.css";
-import { ColorSchemeScript, MantineProvider } from "@mantine/core";
-import StoreProvider from "./StoreProvider";
+import type { Metadata } from 'next';
+import '@mantine/core/styles.css';
+import '@mantine/charts/styles.css';
+import { ColorSchemeScript, MantineProvider } from '@mantine/core';
+import { AuthProvider } from '../context/authContext';
 
 export const metadata: Metadata = {
-  title: "ClientPulse",
-  description: "The Strategic Growth Engine",
+  title: 'ClientPulse',
+  description: 'The Strategic Growth Engine',
 };
 
 export default function RootLayout({
@@ -20,9 +20,9 @@ export default function RootLayout({
         <ColorSchemeScript />
       </head>
       <body>
-        <StoreProvider>
+        <AuthProvider>
           <MantineProvider>{children}</MantineProvider>
-        </StoreProvider>
+        </AuthProvider>
       </body>
     </html>
   );
