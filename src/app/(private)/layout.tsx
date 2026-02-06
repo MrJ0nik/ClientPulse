@@ -1,3 +1,5 @@
+import "@/src/app/globals.css";
+
 export default function HomeLayout({
   children,
 }: {
