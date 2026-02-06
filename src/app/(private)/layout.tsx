@@ -1,3 +1,4 @@
+import ProtectedRoute from '../(auth)/_components/protectedRoute';
 // import "@/src/app/globals.css";
 
 // export default function HomeLayout({
@@ -21,9 +22,11 @@ export default function HomeLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className={styles.layout}>
+    <ProtectedRoute>
+        <div className={styles.layout}>
       <Header />
       <HomeWrapper>{children}</HomeWrapper>
     </div>
+    </ProtectedRoute>
   );
 }
