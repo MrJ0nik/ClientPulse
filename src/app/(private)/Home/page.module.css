@@ -1,0 +1,9 @@
+.page {
+  flex: 1;
+  padding: 20px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+
+  word-break: break-all;
+  max-width: 100%;
+}
