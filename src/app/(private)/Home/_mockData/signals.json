@@ -1,0 +1,82 @@
+[
+  {
+    "id": "signal_001",
+    "domain": "netflix.com",
+    "title": "Netflix announces expansion into Cloud Gaming services beta",
+    "source": "https://techcrunch.com/2023/08/14/netflix-launches-game-streaming-beta/",
+    "painPoint": "Latency sensitivity in APAC region",
+    "date": "2024-02-09T14:30:00Z"
+  },
+  {
+    "id": "signal_002",
+    "domain": "softserveinc.com",
+    "title": "SoftServe Case Study: Building low-latency multiplayer backend",
+    "source": "https://www.linkedin.com/posts/softserve_innovation-technology",
+    "painPoint": "Need for real-time data processing",
+    "date": "2024-02-09T11:15:00Z"
+  },
+  {
+    "id": "signal_003",
+    "domain": "spotify.com",
+    "title": "Spotify launches AI DJ for premium users in new markets",
+    "source": "https://newsroom.spotify.com/2023-02-22/ai-dj/",
+    "painPoint": "User personalization scaling costs",
+    "date": "2024-02-08T16:45:00Z"
+  },
+  {
+    "id": "signal_004",
+    "domain": "aws.amazon.com",
+    "title": "AWS launches new Low-Latency Zones in Germany",
+    "source": "https://aws.amazon.com/blogs/aws/new-zones-europe",
+    "painPoint": "Data sovereignty compliance (GDPR)",
+    "date": "2024-02-08T09:00:00Z"
+  },
+  {
+    "id": "signal_005",
+    "domain": "uber.com",
+    "title": "Uber optimizes fleet management with new ML models",
+    "source": "https://eng.uber.com/research",
+    "painPoint": "Operational cost reduction",
+    "date": "2024-02-07T15:20:00Z"
+  },
+  {
+    "id": "signal_006",
+    "domain": "airbnb.com",
+    "title": "Airbnb introduces new anti-party technology for hosts",
+    "source": "https://news.airbnb.com/trust-and-safety",
+    "painPoint": "Risk management & Trust safety",
+    "date": "2024-02-07T10:00:00Z"
+  },
+  {
+    "id": "signal_007",
+    "domain": "microsoft.com",
+    "title": "Microsoft Copilot integration for Enterprise Finance teams",
+    "source": "https://blogs.microsoft.com/ai/copilot-finance",
+    "painPoint": "Legacy system integration bottleneck",
+    "date": "2024-02-06T13:45:00Z"
+  },
+  {
+    "id": "signal_008",
+    "domain": "shopify.com",
+    "title": "Shopify Editions: New tools for B2B commerce expansion",
+    "source": "https://www.shopify.com/editions/winter2024",
+    "painPoint": "B2B wholesale complexity",
+    "date": "2024-02-06T08:30:00Z"
+  },
+  {
+    "id": "signal_009",
+    "domain": "stripe.com",
+    "title": "Stripe launches adaptive pricing for subscription models",
+    "source": "https://stripe.com/blog/billing-updates",
+    "painPoint": "Churn reduction strategies",
+    "date": "2024-02-05T17:10:00Z"
+  },
+  {
+    "id": "signal_010",
+    "domain": "notion.so",
+    "title": "Notion acquires Cron to improve calendar integration",
+    "source": "https://www.notion.so/blog/acquisition",
+    "painPoint": "Product ecosystem fragmentation",
+    "date": "2024-02-05T12:00:00Z"
+  }
+]

@@ -1,8 +1,10 @@
 import type { Metadata } from 'next';
 import '@mantine/core/styles.css';
 import '@mantine/charts/styles.css';
+import "@/src/app/globals.css";
 import { ColorSchemeScript, MantineProvider } from '@mantine/core';
 import { AuthProvider } from '../context/authContext';
+
 
 export const metadata: Metadata = {
   title: 'ClientPulse',
