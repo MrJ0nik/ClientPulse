@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "@mantine/core/styles.css";
 import "@mantine/charts/styles.css";
+import "@/src/app/globals.css";
 import { ColorSchemeScript, MantineProvider } from "@mantine/core";
 import StoreProvider from "./StoreProvider";
 

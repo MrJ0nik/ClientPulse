@@ -1,4 +1,5 @@
 "use client";
+import styles from "./page.module.css";
 
 import { AppShell, Container, Grid } from "@mantine/core";
 import { StatsGrid } from "./_components/StatsGrid/StatsGrid";
