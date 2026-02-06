@@ -1,0 +1,18 @@
+[
+  {
+    "id": "opp_1",
+    "company": "Coca-Cola",
+    "domain": "coca-cola.com",
+    "dept": "APAC Logistics",
+    "probability": 85,
+    "proposalDraft": "Subject: Optimization for APAC Logistics\n\nDear Team,\n\nBased on our analysis of your logistics network in the Asia-Pacific region..."
+  },
+  {
+    "id": "opp_2",
+    "company": "SoftServe",
+    "domain": "softserveinc.com",
+    "dept": "Cloud Infrastructure",
+    "probability": 60,
+    "proposalDraft": "Subject: Scaling Cloud Infra\n\nDear SoftServe Team,\n\nWe noticed your recent expansion into..."
+  }
+]
