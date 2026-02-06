@@ -2,11 +2,11 @@
 import styles from "./page.module.css";
 
 import { AppShell, Container, Grid } from "@mantine/core";
-import { StatsGrid } from "./_components/StatsGrid/StatsGrid";
-import { SignalFeed } from "./_components/SignalFeed/SignalFeed";
-import { OpportunitiesList } from "./_components/OpportunitiesList/OpportunitiesList";
-import mockData from "./_mockData/signals.json";
-import mockOpportunities from "./_mockData/letters.json";
+import { StatsGrid } from "../Home/_components/StatsGrid/StatsGrid";
+import { SignalFeed } from "../Home/_components/SignalFeed/SignalFeed";
+import { OpportunitiesList } from "../Home/_components/OpportunitiesList/OpportunitiesList";
+import mockData from "../Home/_mockData/signals.json";
+import mockOpportunities from "../Home/_mockData/letters.json";
 
 export default function Dashboard() {
   return (
