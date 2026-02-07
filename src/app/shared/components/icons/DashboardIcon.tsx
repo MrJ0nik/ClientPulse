@@ -1,4 +1,4 @@
-import styles from "./Icon.module.css";
+import styles from './Icon.module.css';
 
 export default function DashboardIcon({ isActive }: { isActive?: boolean }) {
   return (

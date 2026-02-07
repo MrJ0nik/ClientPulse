@@ -1,23 +1,21 @@
-.navbar {
-  height: 100vh;
+.sidebar {
+  height: 100%;
   width: 250px;
   display: flex;
   flex-direction: column;
   background-color: inherit;
   border-right: 2px solid var(--border-color);
-
-  position: sticky;
-  top: 0;
   flex-shrink: 0;
 }
-.navbarMain {
-  height: 80vh;
-  padding: 15px;
+
+.sidebarMain {
+  flex: 1;
+  padding: 25px 15px;
+  overflow-y: auto;
 }
 
 .footer {
-  padding: 15px;
-  padding-top: 16px;
+  padding: 25px 15px;
   border-top: 2px solid var(--border-color);
 }
 
@@ -39,16 +37,4 @@
 
 .navLabel {
   font-size: 15px;
-}
-
-.userButton {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  border-radius: 8px;
-  color: var(--text-primary);
-}
-
-.userButton:hover {
-  background-color: rgba(255, 255, 255, 0.05);
 }

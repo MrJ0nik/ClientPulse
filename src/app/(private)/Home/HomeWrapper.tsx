@@ -1,20 +1,37 @@
-"use client";
-import { useState } from "react";
-import { Group } from "@mantine/core";
-import NavBar from "./homeComponents/NavBar/NavBar";
-import { TabName } from "@/src/app/shared/constants/types";
+'use client';
+import { useState } from 'react';
+import SideBar from './homeComponents/SideBar/SideBar';
+import { TabName } from '@/src/app/shared/constants/types';
 
 export default function HomeWrapper({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const [activeTab, setActiveTab] = useState<TabName>("Accounts");
+  const [activeTab, setActiveTab] = useState<TabName>('Accounts');
 
   return (
-    <Group align="flex-start" gap={0} wrap="nowrap" style={{ width: "100%" }}>
-      <NavBar active={activeTab} setActive={setActiveTab} />
-      <main style={{ flex: 1, minWidth: 0 }}>{children}</main>
-    </Group>
+    <div
+      style={{
+        display: 'flex',
+        width: '100%',
+        height: '100vh',
+        overflow: 'hidden',
+        backgroundColor: 'var(--bg-midnight)',
+      }}
+    >
+      <SideBar active={activeTab} setActive={setActiveTab} />
+
+      <main
+        style={{
+          flex: 1,
+          height: '100%',
+          overflowY: 'auto',
+          minWidth: 0,
+        }}
+      >
+        {children}
+      </main>
+    </div>
   );
 }
