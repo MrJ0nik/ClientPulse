@@ -1,0 +1,54 @@
+.navbar {
+  height: 100vh;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  background-color: inherit;
+  border-right: 2px solid var(--border-color);
+
+  position: sticky;
+  top: 0;
+  flex-shrink: 0;
+}
+.navbarMain {
+  height: 80vh;
+  padding: 15px;
+}
+
+.footer {
+  padding: 15px;
+  padding-top: 16px;
+  border-top: 2px solid var(--border-color);
+}
+
+.navLink {
+  border-radius: 8px;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.navLink:hover {
+  background-color: inherit;
+  color: var(--text-primary);
+}
+
+.navLink[data-active] {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+}
+
+.navLabel {
+  font-size: 15px;
+}
+
+.userButton {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  color: var(--text-primary);
+}
+
+.userButton:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
