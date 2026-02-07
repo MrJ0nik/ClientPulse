@@ -1,0 +1,44 @@
+.userButton {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  color: var(--text-primary);
+  transition: background-color 0.2s ease;
+  border: 1px solid transparent;
+  outline: none;
+}
+
+.userButton:hover {
+  background-color: var(--bg-midnight);
+}
+
+.userButton[data-expanded='true'],
+.userButton:focus {
+  border-color: transparent;
+}
+
+.menuDropdown {
+  background-color: var(--bg-midnight);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  padding: 8px;
+}
+
+.iconContainer {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.chevron {
+  transition: transform 0.2s ease;
+  color: var(--text-secondary);
+}
+
+.rotate {
+  transform: rotate(180deg);
+}

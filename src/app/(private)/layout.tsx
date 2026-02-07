@@ -11,7 +11,6 @@ import ProtectedRoute from '../(auth)/_components/protectedRoute';
 
 // src/app/(private)/Home/layout.tsx
 
-import Header from './home/homeComponents/Header/Header';
 import HomeWrapper from './home/HomeWrapper';
 import styles from './layout.module.css';
 import '@/src/app/globals.css';
@@ -24,7 +23,6 @@ export default function HomeLayout({
   return (
     <ProtectedRoute>
       <div className={styles.layout}>
-        <Header />
         <HomeWrapper>{children}</HomeWrapper>
       </div>
     </ProtectedRoute>

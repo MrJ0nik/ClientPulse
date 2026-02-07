@@ -1,12 +1,12 @@
-import { SimpleGrid, Paper, Group, Text, ThemeIcon, rem } from "@mantine/core";
-import { TrendingUp, Activity, AlertCircle } from "lucide-react";
-import styles from "./StatsGrid.module.css";
+import { SimpleGrid, Paper, Group, Text, ThemeIcon, rem } from '@mantine/core';
+import { Activity, AlertCircle, Building2 } from 'lucide-react';
+import styles from './StatsGrid.module.css';
 
 export interface StatItem {
   label: string;
   value: string;
   diff?: number;
-  type: "growth" | "activity" | "alert" | "neutral";
+  type: 'activity' | 'alert' | 'neutral' | 'accounts';
   color?: string;
 }
 
@@ -16,21 +16,21 @@ interface StatsGridProps {
 
 const getIconConfig = (type: string) => {
   switch (type) {
-    case "growth":
-      return { icon: TrendingUp, color: "teal" };
-    case "activity":
-      return { icon: Activity, color: "violet" };
-    case "alert":
-      return { icon: AlertCircle, color: "orange" };
+    case 'activity':
+      return { icon: Activity, color: 'violet' };
+    case 'alert':
+      return { icon: AlertCircle, color: 'orange' };
+    case 'accounts':
+      return { icon: Building2, color: 'indigo' };
     default:
-      return { icon: Activity, color: "blue" };
+      return { icon: Activity, color: 'blue' };
   }
 };
 
 const defaultStats: StatItem[] = [
-  { label: "Pipeline Uncovered", value: "$0.0M", diff: 0, type: "growth" },
-  { label: "Active Signals", value: "0", diff: 0, type: "activity" },
-  { label: "Pending Actions", value: "0", diff: 0, type: "alert" },
+  { label: 'Active Accounts', value: '15', diff: 2, type: 'accounts' },
+  { label: 'Active Signals', value: '0', diff: 0, type: 'activity' },
+  { label: 'Pending Actions', value: '0', diff: 0, type: 'alert' },
 ];
 
 export function StatsGrid({ data = defaultStats }: StatsGridProps) {
@@ -41,41 +41,32 @@ export function StatsGrid({ data = defaultStats }: StatsGridProps) {
         const IconComponent = config.icon;
         const accentColor = stat.color || config.color;
 
-        let diffColor = "gray.6";
-        let diffText = "0";
+        let diffColor = 'gray.6';
+        let diffText = '';
 
         if (stat.diff !== undefined) {
           if (stat.diff > 0) {
-            diffColor = "teal.4";
-            diffText = `+${stat.diff}`;
+            diffColor = 'teal.4';
+            diffText = `+${stat.diff} new`;
           } else if (stat.diff < 0) {
-            diffColor = "red.5";
+            diffColor = 'red.5';
             diffText = `${stat.diff}`;
           } else {
-            diffColor = "dimmed";
-            diffText = "0";
+            diffColor = 'dimmed';
+            diffText = '';
           }
         }
 
         return (
           <Paper key={stat.label} p="xl" radius="md" className={styles.card}>
             <Group justify="space-between" align="flex-start" mb="xs">
-              <Group className={styles.valueGroup}>
-                <Text
-                  size="xl"
-                  fw={700}
-                  className={styles.value}
-                  style={{ fontSize: rem(32) }}
-                >
-                  {stat.value}
-                </Text>
-
-                {stat.diff !== undefined && (
-                  <Text className={styles.diff} c={diffColor}>
-                    {diffText}
-                  </Text>
-                )}
-              </Group>
+              <Text
+                className={styles.value}
+                fw={700}
+                style={{ fontSize: rem(32), lineHeight: 1 }}
+              >
+                {stat.value}
+              </Text>
 
               <ThemeIcon
                 variant="light"
@@ -88,9 +79,22 @@ export function StatsGrid({ data = defaultStats }: StatsGridProps) {
               </ThemeIcon>
             </Group>
 
-            <Text size="sm" fw={500} mt="auto" className={styles.label}>
+            <Text
+              size="xs"
+              c="dimmed"
+              tt="uppercase"
+              fw={700}
+              className={styles.label}
+              mt={5}
+            >
               {stat.label}
             </Text>
+
+            {diffText && (
+              <Text c={diffColor} size="sm" fw={500} mt="xs">
+                {diffText}
+              </Text>
+            )}
           </Paper>
         );
       })}
