@@ -16,8 +16,8 @@ export default function LoginPage() {
 
   const handleGoogleLogin = async () => {
     try {
-      router.push('/home');
       await signInWithPopup(auth, googleProvider);
+      router.push('/home');
     } catch (error) {
       setError('Something went wrong');
     }
