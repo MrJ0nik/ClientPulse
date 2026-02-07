@@ -4,6 +4,10 @@
 /node_modules
 /.pnp
 .pnp.*
+
+# Python virtual environment
+venv/
+.venv
 .yarn/*
 !.yarn/patches
 !.yarn/plugins
