@@ -17,7 +17,7 @@ export default function RegisterPage() {
   const handleGoogleLogin = async () => {
     try {
       await signInWithPopup(auth, googleProvider);
-      router.push('/home');
+      router.push('/create-workspace');
     } catch (error) {
       setError('Something went wrong');
     }

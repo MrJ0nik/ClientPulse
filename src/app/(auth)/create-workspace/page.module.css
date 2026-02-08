@@ -70,11 +70,14 @@
   top: 1.5rem;
   right: 1.5rem;
   z-index: 50;
+  background-color: transparent !important;
   color: #64748b !important;
-  transition: color 0.2s;
+  transition: all 0.2s ease;
+  border: none !important;
 }
 
 .closeBtn:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
   color: white !important;
 }
 
@@ -104,79 +107,6 @@
   line-height: 1.1 !important;
 }
 
-.stepperWrapper {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-}
-
-.stepperLineBase {
-  position: absolute;
-  left: 15px;
-  top: 10px;
-  bottom: 30px;
-  width: 2px;
-  background-color: #1e293b;
-  z-index: 0;
-}
-
-.stepperLineActive {
-  position: absolute;
-  left: 15px;
-  top: 10px;
-  width: 2px;
-  background: linear-gradient(to bottom, #10b981, #34d399);
-  transition: height 0.5s ease-in-out;
-  z-index: 1;
-  box-shadow: 0 0 12px rgba(16, 185, 129, 0.4);
-}
-
-.stepItem {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  z-index: 10;
-  position: relative;
-}
-
-.stepCircle {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  border: 2px solid;
-  transition: all 0.3s;
-  background-color: #0b1120;
-  flex-shrink: 0;
-}
-
-.stepCircleActive {
-  background-color: #10b981;
-  border-color: #10b981;
-  color: white;
-  box-shadow:
-    0 0 0 4px rgba(16, 185, 129, 0.2),
-    0 0 20px rgba(16, 185, 129, 0.4);
-  transform: scale(1.05);
-}
-
-.stepCircleDone {
-  background-color: #10b981 !important;
-  border-color: #10b981 !important;
-  color: white !important;
-  box-shadow: 0 0 15px rgba(16, 185, 129, 0.4);
-}
-
-.stepCircleInactive {
-  background-color: #0f172a;
-  border-color: #334155;
-  color: #64748b;
-}
-
 .contentWrapper {
   flex: 1;
   padding: 3rem 4rem;
@@ -185,80 +115,10 @@
   justify-content: center;
 }
 
-.inputField {
-  background-color: #0f1623 !important;
-  border: 1px solid #334155 !important;
-  color: white !important;
-  min-height: 3.5rem !important;
-  height: auto !important;
-  border-radius: 0.75rem !important;
-  font-size: 1rem !important;
-}
-
-.inputField:focus {
-  border-color: #10b981 !important;
-  box-shadow:
-    0 0 0 1px #10b981,
-    0 0 15px rgba(16, 185, 129, 0.1) !important;
-  background-color: #151e32 !important;
-}
-
-.inputLabel {
-  color: #cbd5e1 !important;
-  margin-bottom: 0.5rem !important;
-  font-weight: 500 !important;
-}
-
-.inputIconSection {
-  color: #64748b;
-  width: 3rem !important;
-}
-
-.inputField:focus + div > .inputIconSection {
-  color: #10b981 !important;
-}
-
-.pulseWrapper {
-  position: relative;
-  width: 100px;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 2rem;
-}
-
-.pulseRing {
-  position: absolute;
-  border: 2px solid #10b981;
-  border-radius: 50%;
+.hidden {
+  display: none !important;
   opacity: 0;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  animation: pulse 2s infinite ease-out;
-}
-
-.pulseRing:nth-child(1) {
-  animation-delay: 0s;
-}
-.pulseRing:nth-child(2) {
-  animation-delay: 0.6s;
-}
-
-@keyframes pulse {
-  0% {
-    width: 40px;
-    height: 40px;
-    opacity: 0.8;
-    border-width: 2px;
-  }
-  100% {
-    width: 140px;
-    height: 140px;
-    opacity: 0;
-    border-width: 0px;
-  }
+  pointer-events: none;
 }
 
 .glowButton {
@@ -292,11 +152,14 @@
 }
 
 .backBtn {
+  background-color: transparent !important;
   color: #94a3b8 !important;
   font-weight: 500 !important;
+  border: 1px solid transparent !important;
 }
 
 .backBtn:hover {
   color: white !important;
-  background: none !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
 }
