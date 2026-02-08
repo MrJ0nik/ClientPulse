@@ -2,23 +2,39 @@
   background: linear-gradient(135deg, #1a1d29 0%, #0f1117 100%);
   border: 1px solid rgba(255, 255, 255, 0.05);
   transition:
-    transform 0.2s ease,
-    border-color 0.2s ease,
-    box-shadow 0.2s ease;
+    transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .card:hover {
-  transform: translateY(-2px);
-  border-color: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  /* Pronounced lift effect */
+  transform: translateY(-8px);
+  border-color: rgba(20, 184, 166, 0.3);
+  box-shadow: 
+    0 20px 40px -15px rgba(20, 184, 166, 0.2),
+    0 0 1px 0 rgba(20, 184, 166, 0.1);
+  background: linear-gradient(135deg, #1a1d2f 0%, #0f1120 100%);
+}
+
+.card:focus-within {
+  border-color: rgba(20, 184, 166, 0.2);
+  background: linear-gradient(135deg, #1a1d2f 0%, #0f1120 100%);
 }
 
 .avatar {
   background-color: white;
   padding: 4px;
   border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.card:hover .avatar {
+  transform: scale(1.08);
 }
 
 .button {
@@ -31,6 +47,16 @@
   background-color: rgba(255, 255, 255, 0.05);
   border-color: #9ca3af;
   color: white;
+  transform: scale(1.02);
+}
+
+.button:active {
+  transform: scale(0.98);
+}
+
+.button:focus-visible {
+  outline: 2px solid #14b8a6;
+  outline-offset: 2px;
 }
 
 @keyframes fadeInUp {
@@ -48,3 +74,17 @@
   opacity: 0;
   animation: fadeInUp 0.6s ease-out forwards;
 }
+
+/* Quick actions - show more prominently on hover */
+.card:hover {
+  --action-buttons-opacity: 1;
+  --action-buttons-scale: 1;
+}
+
+/*  Responsive hover effect scale down on mobile */
+@media (max-width: 768px) {
+  .card:hover {
+    transform: translateY(-4px);
+  }
+}
+

@@ -37,6 +37,17 @@ yarn-error.log*
 # env files (can opt-in for committing if needed)
 .env*
 
+# Firebase credentials (NEVER commit)
+*firebase-adminsdk*.json
+*serviceAccountKey*.json
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
 # vercel
 .vercel
 

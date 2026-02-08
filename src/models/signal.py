@@ -29,13 +29,21 @@ class SignalPriority(str, Enum):
 
 
 class EvidenceRef(BaseModel):
-    """Reference to evidence supporting a signal"""
+    """Reference to evidence supporting a signal with source metadata"""
     model_config = ConfigDict(from_attributes=True)
     
+    id: Optional[str] = None
     signal_id: Optional[str] = None
     doc_id: Optional[str] = None
-    chunk_id: Optional[str] = None
-    source_type: Optional[str] = None
+    chunk_id: Optional[str] = None  # Deprecated: kept for backwards compatibility
+    
+    # Source metadata
+    title: Optional[str] = None
+    domain: Optional[str] = None
+    url: Optional[str] = None
+    source_type: Optional[str] = None  # article, pdf, site, news, research, filing, etc.
+    
+    # Content preview
     excerpt: Optional[str] = None
     snippet: Optional[str] = None
     relevance_score: Optional[float] = None

@@ -7,7 +7,33 @@
 }
 
 .header {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+}
+
+.filterBar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.segmented {
+  background-color: rgba(17, 24, 39, 0.7) !important;
+  border: 1px solid rgba(148, 163, 184, 0.25) !important;
+  color: #e5e7eb !important;
+}
+
+.sortLabel {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.sortSelect {
+  background-color: rgba(17, 24, 39, 0.7) !important;
+  border: 1px solid rgba(148, 163, 184, 0.25) !important;
+  color: #e5e7eb !important;
 }
 
 .badge {
@@ -15,6 +41,10 @@
   color: rgba(255, 255, 255, 0.7) !important;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+}
+
+.quickActions {
+  flex-wrap: wrap;
 }
 
 .timelineContainer {
