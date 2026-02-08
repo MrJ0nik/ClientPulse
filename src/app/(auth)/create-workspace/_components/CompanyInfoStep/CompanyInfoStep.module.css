@@ -1,0 +1,62 @@
+/* CompanyInfoStep.module.css */
+
+.fadeIn {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contentTitle {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.contentDescription {
+  color: #94a3b8;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.inputField {
+  background-color: #0f1623 !important;
+  border: 1px solid #334155 !important;
+  color: white !important;
+  min-height: 3.5rem !important;
+  height: auto !important;
+  border-radius: 0.75rem !important;
+  font-size: 1rem !important;
+}
+
+.inputField:focus {
+  border-color: #10b981 !important;
+  box-shadow:
+    0 0 0 1px #10b981,
+    0 0 15px rgba(16, 185, 129, 0.1) !important;
+  background-color: #151e32 !important;
+}
+
+.inputLabel {
+  color: #cbd5e1 !important;
+  margin-bottom: 0.5rem !important;
+  font-weight: 500 !important;
+}
+
+.inputIconSection {
+  color: #64748b;
+  width: 3rem !important;
+}
+
+.inputField:focus + div > .inputIconSection {
+  color: #10b981 !important;
+}
